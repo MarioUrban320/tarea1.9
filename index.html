@@ -48,6 +48,25 @@
             <!-- disabled: desactiva el campo y evita que se envíe con el formulario -->
             <input type="text" id="centro" name="centro" value="IES La Asunción" disabled>
         </fieldset>
+
+        <fieldset>
+            <legend>Preferencias</legend>
+            <span>Turno:</span>
+            <label for="turno-manana">Mañana</label>
+            <!-- radio: permite elegir una opción de un grupo; value: define el valor enviado al elegir la opción -->
+            <input type="radio" id="turno-manana" name="turno" value="manana">
+            <label for="turno-tarde">Tarde</label>
+            <input type="radio" id="turno-tarde" name="turno" value="tarde">
+
+            <span>Intereses:</span>
+            <label for="interes-deporte">Deporte</label>
+            <!-- checkbox: permite marcar o desmarcar una opción independiente -->
+            <input type="checkbox" id="interes-deporte" name="intereses" value="deporte">
+            <label for="interes-lectura">Lectura</label>
+            <input type="checkbox" id="interes-lectura" name="intereses" value="lectura">
+            <label for="interes-musica">Música</label>
+            <input type="checkbox" id="interes-musica" name="intereses" value="musica">
+        </fieldset>
     </form>
 </body>
 </html>
