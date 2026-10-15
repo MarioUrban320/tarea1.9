@@ -90,7 +90,56 @@
             <label for="mes">Mes:</label>
             <!-- month: permite seleccionar un mes y un año -->
             <input type="month" id="mes" name="mes">
+
+            <label for="modulos">Módulos:</label>
+            <!-- select: crea una lista de opciones; multiple: permite seleccionar varias opciones -->
+            <select id="modulos" name="modulos" multiple>
+                <!-- optgroup: agrupa opciones relacionadas; label: muestra el nombre del grupo -->
+                <optgroup label="Primer curso">
+                    <!-- option: representa una opción; selected: la selecciona inicialmente -->
+                    <option value="programacion" selected>Programación</option>
+                    <option value="bases-datos">Bases de datos</option>
+                </optgroup>
+                <optgroup label="Segundo curso">
+                    <option value="desarrollo-web">Desarrollo web</option>
+                    <option value="sistemas">Sistemas</option>
+                </optgroup>
+            </select>
+
+            <label for="comentarios">Comentarios:</label>
+            <!-- textarea: permite escribir texto en varias líneas; rows: define la altura en líneas; cols: define el ancho en caracteres -->
+            <textarea id="comentarios" name="comentarios" rows="4" cols="40"></textarea>
         </fieldset>
+
+        <!-- submit: envía los datos del formulario -->
+        <input type="submit" id="enviar-input" name="enviar-input" value="Enviar">
+        <!-- reset: restaura los controles del formulario a sus valores iniciales -->
+        <input type="reset" id="restablecer-input" name="restablecer-input" value="Restablecer">
+        <!-- button: crea un botón sin una acción de envío o restablecimiento predeterminada -->
+        <input type="button" id="boton-input" name="boton-input" value="Botón">
+        <!-- image: crea un botón de envío con imagen; src: indica la ruta de la imagen; alt: ofrece un texto alternativo -->
+        <input type="image" id="enviar-imagen" name="enviar-imagen" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='32'%3E%3Crect width='100' height='32' fill='%23006bb6'/%3E%3Ctext x='50' y='21' text-anchor='middle' font-family='sans-serif' font-size='14' fill='white'%3EEnviar%3C/text%3E%3C/svg%3E" alt="Enviar">
+
+        <!-- button: representa un botón cuyo comportamiento se define mediante su tipo -->
+        <!-- type: determina la acción del botón -->
+        <button type="submit">Enviar (button)</button>
+        <button type="reset">Restablecer (button)</button>
+        <button type="button">Botón (button)</button>
     </form>
+
+    <!-- form: agrupa los controles de búsqueda de Wikipedia -->
+    <form action="https://es.wikipedia.org/w/index.php" method="get">
+        <label for="search">Buscar en Wikipedia:</label>
+        <!-- search: permite introducir una consulta; list: enlaza el campo con sugerencias de un datalist -->
+        <input type="search" id="search" name="search" list="sugerencias-wikipedia">
+        <!-- datalist: proporciona sugerencias que se pueden elegir o ignorar -->
+        <datalist id="sugerencias-wikipedia">
+            <option value="Formulario web">
+            <option value="HTML">
+            <option value="Protocolo de transferencia de hipertexto">
+        </datalist>
+        <button type="submit">Buscar</button>
+    </form>
+    <p>Si lo que escribes coincide con el título de un artículo, como «España», Wikipedia te lleva a ese artículo; si no, te muestra una lista de resultados. Las sugerencias solo ayudan a completar la búsqueda: puedes escribir cualquier otro texto.</p>
 </body>
 </html>
