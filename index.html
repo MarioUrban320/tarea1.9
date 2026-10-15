@@ -7,7 +7,7 @@
 </head>
 <body>
     <!-- form: agrupa controles para enviar sus datos; action: indica dónde se envían; method: define cómo se envían -->
-    <form action="index.html" method="get">
+    <form action="index.html" method="post">
         <!-- fieldset: agrupa campos relacionados -->
         <fieldset>
             <!-- legend: da un título al grupo de campos -->
@@ -167,5 +167,8 @@
         <button type="submit">Validar HTML</button>
     </form>
     <p>El validador descarga tu web y comprueba si su HTML cumple el estándar. Lista los errores con la línea en la que aparece cada uno; si no hay errores, indica «Document checking completed». Si marcas «Ver el código», también muestra el código con las líneas numeradas.</p>
+
+    <h2>¿Qué problema de seguridad descubres en el historial por haber enviado la inscripción con GET? ¿Qué método recomienda el artículo para un formulario como este y por qué?</h2>
+    <p>Con GET, los datos de la inscripción se añaden a la URL. Por eso pueden quedar visibles en el historial del navegador y exponerse si contienen información personal, como el correo o la contraseña. Para enviar una inscripción, el artículo recomienda POST: los datos se envían en el cuerpo de la petición en lugar de aparecer en la URL. POST no cifra los datos por sí solo; para protegerlos durante el envío también se necesita HTTPS.</p>
 </body>
 </html>
