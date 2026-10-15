@@ -141,5 +141,31 @@
         <button type="submit">Buscar</button>
     </form>
     <p>Si lo que escribes coincide con el título de un artículo, como «España», Wikipedia te lleva a ese artículo; si no, te muestra una lista de resultados. Las sugerencias solo ayudan a completar la búsqueda: puedes escribir cualquier otro texto.</p>
+
+    <form action="https://www.openstreetmap.org/search" method="get">
+        <label for="mapa-query">Buscar una ciudad:</label>
+        <select id="mapa-query" name="query">
+            <optgroup label="Alicante">
+                <option value="Alicante">Alicante</option>
+                <option value="Elche">Elche</option>
+            </optgroup>
+            <optgroup label="Valencia">
+                <option value="Valencia">Valencia</option>
+                <option value="Gandia">Gandia</option>
+            </optgroup>
+        </select>
+        <button type="submit">Buscar en OpenStreetMap</button>
+    </form>
+    <p>OpenStreetMap busca la ciudad elegida, muestra a la izquierda los lugares que coinciden y centra el mapa en el primero.</p>
+
+    <form action="https://validator.w3.org/nu/" method="get">
+        <label for="url-validador">Dirección de la web:</label>
+        <!-- url: permite introducir una dirección web -->
+        <input type="url" id="url-validador" name="doc" value="https://mariourban320.github.io/tarea1.9/">
+        <input type="checkbox" id="ver-codigo" name="showsource" value="yes">
+        <label for="ver-codigo">Ver el código</label>
+        <button type="submit">Validar HTML</button>
+    </form>
+    <p>El validador descarga tu web y comprueba si su HTML cumple el estándar. Lista los errores con la línea en la que aparece cada uno; si no hay errores, indica «Document checking completed». Si marcas «Ver el código», también muestra el código con las líneas numeradas.</p>
 </body>
 </html>
